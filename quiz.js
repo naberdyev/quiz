@@ -70,13 +70,24 @@ function init() {
 
     let quizStr = ''
     //loop through the array of question
-    questions.forEach(question => {
-        
+    questions.forEach((question, qIndex) => {
+        let answerStr = ''
+        question.a.forEach((answer, aIndex) => {
+            answerStr += `
+            <li>
+                <lable>
+                    <input type="radio" name="question-${qIndex}">
+                    ${answer}
+                </lable>
+            </li>
+            `
+        })
+
         quizStr +=`
         <form> 
             <h1>${question.q}</h1>
             <ul>
-                
+                ${answerStr}
             </ul>
         </form>
         `
