@@ -26,10 +26,11 @@ function init() {
         quizStr +=`
         <form> 
             <h1>${question.q}</h1>
-            <div class="alert">-</div>
+            
             <ul style="display: flex; flex-direction:column">
                 ${answerStr}
             </ul>
+            <div class="alert"></div>
             <lable>
                 <button type="submit">Submit</button> 
             </lable>
@@ -47,8 +48,10 @@ function init() {
             alert.innerHTML = 'You need to select an answer'
         } else if (selectedInput.dataset.correct === "true") {
             alert.innerHTML = "That's correct!"
+            alert.style.color = 'green'
         } else {
             alert.innerHTML = 'Oops! Try again!'
+            alert.style.color = 'red'
         }
     })
 }
