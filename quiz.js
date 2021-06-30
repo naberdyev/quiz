@@ -11,14 +11,14 @@ function init() {
         question.a.forEach((answer, aIndex) => {
             answerStr += `
             <li style="order:${answerOrder[aIndex]}">
-                <lable>
+                <label>
                     <input 
                         type="radio" 
                         name="question-${qIndex}"
                         data-correct="${question.correct === aIndex}"
                     >
                     ${answer}
-                </lable>
+                </label>
             </li>
             `
         })
@@ -31,9 +31,9 @@ function init() {
                 ${answerStr}
             </ul>
             <div class="alert"></div>
-            <lable>
+            <label>
                 <button type="submit">Submit</button> 
-            </lable>
+            </label>
         </form>
         `
     })
