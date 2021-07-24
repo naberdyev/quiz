@@ -13,14 +13,17 @@ function init() {
             answerStr += `
             
             <li style="order:${answerOrder[aIndex]}">
-                
+                <label>
+                <div class="button answer">
                     <input 
                         id="${'' + qIndex + aIndex}"
                         type="radio" 
                         name="question-${qIndex}"
                         data-correct="${question.correct === aIndex}"
                     >
-                    <label for="${'' + qIndex + aIndex}">${answer}</label>
+                    ${answer}
+                </div>
+                </label>
             </li>
             `
             i++
@@ -36,7 +39,7 @@ function init() {
             </ul>
             <div class="alert"></div>
             <label class="submit">
-                <button type="submit">Submit</button> 
+                <button class="button" type="submit"><span>Submit</span></button> 
             </label>
         </form>
         </div>
