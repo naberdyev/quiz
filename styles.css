@@ -15,7 +15,7 @@ body {
   width: 500px;
   max-width: 550px;
   min-height: 200px;
-  height: auto;
+  height: fit-content;
   /* max-height: 350px; */
   border: black solid 0px;
   border-radius: 1em;
@@ -53,6 +53,9 @@ h1 {
 div.alert {
   margin: 0.25em;
   font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
 }
 div.quiz-name {
   text-align: center;
@@ -98,26 +101,17 @@ li > div > label {
   /* color: aliceblue; */
   user-select: none;
 }
-div.button input[type="radio"]:checked + label {
+/* label > input[type="radio"]:checked {
   opacity: 1;
   box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.5),
     inset 8px 8px 16px rgba(0, 0, 0, 0.1);
   color: #79e3b6;
-}
+} */
 label.submit {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 button {
-  /* cursor: pointer;
-  justify-self: left;
-  background-color: red;
-  color: white;
-  font-size: 2em;
-  padding: 0.5em 1em;
-  border-radius: 0.75em;
-  font-weight: bolder;
-  margin: 10px; */
   border: solid 0;
 }
 
@@ -162,8 +156,16 @@ li > label > .button {
     min-width: 7em;
     max-width: 12em;
     width: max-content;
-    height: fit-content;
+    min-height: 100px;
+    max-height: 300px;
+    height: max-content;
     padding: 20px 20px;
     font-size: 4em;
   }
+}
+
+label.submit > button.button {
+  color: black;
+  background: #ebe7f7;
+  font-weight: bolder;
 }

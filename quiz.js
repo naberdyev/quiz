@@ -37,7 +37,7 @@ function init() {
             <ul class="answers-list">
                 ${answerStr}
             </ul>
-            <div class="alert"></div>
+            <div class="alert"> Click on the answer</div>
             <label class="submit">
                 <button class="button" type="submit"><span>Submit</span></button> 
             </label>
