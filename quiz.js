@@ -33,7 +33,7 @@ function init() {
                 ${answerStr}
             </ul>
             <div class="alert"></div>
-            <label>
+            <label class="submit">
                 <button type="submit">Submit</button> 
             </label>
         </form>
