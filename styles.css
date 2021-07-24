@@ -63,21 +63,27 @@ ul {
 input[type="radio"] {
   display: none;
 }
+
 li {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+}
+li > label {
+  cursor: pointer;
   font-size: 2em;
   font-weight: normal;
   border: grey solid 1px;
   box-shadow: 2px 2px 5px gray;
   border-radius: 1em;
-  padding: 5px;
+  padding: 10px 20px;
   margin: 5px;
   text-align: center;
   background-color: blanchedalmond;
 }
-li:hover {
-  filter: brightness(95%);
+li > label + input[type="radio"]:checked {
+  background-color: blue;
 }
-
 label.submit {
   display: flex;
   justify-content: flex-end;
