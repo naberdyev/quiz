@@ -9,19 +9,21 @@ function init() {
         let answerStr = ''
         const answerOrder = randomRange(question.a.length)
         question.a.forEach((answer, aIndex) => {
+            let i = 0;
             answerStr += `
             
             <li style="order:${answerOrder[aIndex]}">
                 
                     <input 
-                        id="${answerOrder[aIndex]}"
+                        id="${'' + qIndex + aIndex}"
                         type="radio" 
                         name="question-${qIndex}"
                         data-correct="${question.correct === aIndex}"
                     >
-                    <label for="${answerOrder[aIndex]}">${answer}</label>
+                    <label for="${'' + qIndex + aIndex}">${answer}</label>
             </li>
             `
+            i++
         })
 
         quizStr +=`
