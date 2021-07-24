@@ -12,6 +12,8 @@ body {
   height: auto;
   /* max-height: 350px; */
   border: black solid 1px;
+  border-radius: 1em;
+  box-shadow: 1px 1px 15px blue;
   padding: 20px;
   margin: 20px;
 }
@@ -70,19 +72,22 @@ li {
   justify-content: center;
 }
 li > label {
+  display: inline-block;
   cursor: pointer;
-  font-size: 2em;
+  font-size: 1.75em;
   font-weight: normal;
-  border: grey solid 1px;
+  border: 0;
   box-shadow: 2px 2px 5px gray;
   border-radius: 1em;
   padding: 10px 20px;
-  margin: 5px;
+  margin: 0px;
   text-align: center;
-  background-color: blanchedalmond;
+  background-color: darkblue;
+  color: aliceblue;
+  user-select: none;
 }
-li > label + input[type="radio"]:checked {
-  background-color: blue;
+li input[type="radio"]:checked + label {
+  filter: brightness(70%);
 }
 label.submit {
   display: flex;
@@ -90,13 +95,13 @@ label.submit {
 }
 button {
   justify-self: left;
-  background-color: lemonchiffon;
-  color: black;
+  background-color: red;
+  color: white;
   font-size: 2em;
-  padding: 0.5em;
+  padding: 0.5em 1em;
   border-radius: 0.75em;
   font-weight: bolder;
   margin-left: 1em;
   margin-top: 0.25em;
-  border-style: dashed;
+  border: solid 0;
 }

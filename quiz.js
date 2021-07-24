@@ -12,14 +12,14 @@ function init() {
             answerStr += `
             
             <li style="order:${answerOrder[aIndex]}">
-                <label>
+                
                     <input 
+                        id="${answerOrder[aIndex]}"
                         type="radio" 
                         name="question-${qIndex}"
                         data-correct="${question.correct === aIndex}"
                     >
-                    ${answer}
-                </label>
+                    <label for="${answerOrder[aIndex]}">${answer}</label>
             </li>
             `
         })
