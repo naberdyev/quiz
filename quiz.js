@@ -10,6 +10,7 @@ function init() {
         const answerOrder = randomRange(question.a.length)
         question.a.forEach((answer, aIndex) => {
             answerStr += `
+            
             <li style="order:${answerOrder[aIndex]}">
                 <label>
                     <input 
@@ -24,6 +25,7 @@ function init() {
         })
 
         quizStr +=`
+        <div class="question-block">
         <form> 
             <h1>${question.q}</h1>
             
@@ -35,6 +37,7 @@ function init() {
                 <button type="submit">Submit</button> 
             </label>
         </form>
+        </div>
         `
     })
     quizEl.innerHTML = quizStr;
