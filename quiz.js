@@ -38,8 +38,8 @@ function init() {
                 ${answerStr}
             </ul>
             <div class="alert"> Click on the answer</div>
-            <label class="submit">
-                <button class="button" type="submit"><span>Submit</span></button> 
+            <label class="submit noSelect">
+                <button class="button noSelect" type="submit"><span>Submit</span></button> 
             </label>
         </form>
         </div>

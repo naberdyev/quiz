@@ -7,6 +7,15 @@ body {
   justify-content: space-around;
   font-family: "Montserrat";
 }
+.noSelect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .question-block {
   display: flex;
   flex-direction: column;
@@ -56,6 +65,11 @@ div.alert {
   display: flex;
   justify-content: center;
   padding: 10px;
+}
+@media (max-width: 1080px) {
+  div.alert {
+    font-size: 3em;
+  }
 }
 div.quiz-name {
   text-align: center;
@@ -121,7 +135,7 @@ button {
   align-content: center;
   flex-wrap: wrap;
   width: 400px;
-  height: 100px;
+  height: max-content;
   background: #f3f0f1;
   margin-bottom: 25px;
   border-radius: 32px;
@@ -168,4 +182,19 @@ label.submit > button.button {
   color: black;
   background: #ebe7f7;
   font-weight: bolder;
+}
+
+@media (max-width: 1080px) {
+  label.submit > button.button {
+    width: 10em;
+  }
+}
+
+.noSelect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
