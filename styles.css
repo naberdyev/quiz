@@ -150,6 +150,11 @@ button > span {
   font-family: "Montserrat", sans-serif;
   font-size: 32px;
 }
+@media (max-width: 1080px) {
+  button > span {
+    font-size: 4em;
+  }
+}
 .button:hover {
   opacity: 0.3;
 }
@@ -162,17 +167,17 @@ button > span {
 
 li > label > .button {
   width: 400px;
-  padding: 0 15px;
+  padding: 20px 20px;
   font-size: 2em;
 }
 @media (max-width: 1080px) {
   li > label > .button {
     min-width: 7em;
     max-width: 12em;
-    width: max-content;
+    width: 10em;
     min-height: 100px;
     max-height: 300px;
-    height: max-content;
+    height: auto;
     padding: 20px 20px;
     font-size: 4em;
   }
@@ -186,7 +191,9 @@ label.submit > button.button {
 
 @media (max-width: 1080px) {
   label.submit > button.button {
-    width: 10em;
+    min-width: 400px;
+    width: 60%;
+    min-height: 150px;
   }
 }
 
